@@ -1,6 +1,6 @@
 # funnel
 
-A component that tracks progress through a series of steps.
+A ui component that tracks progress through a series of steps.
 
 [![browser support](https://ci.testling.com/tanem/funnel.png)](https://ci.testling.com/tanem/funnel)
 
@@ -27,7 +27,7 @@ This library may be used stand-alone without the component tool. To build the st
 $ make standalone
 ```
 
-Then add ./funnel.js to your application and reference the `Funnel` global.
+Then add ./standalone/funnel.css and ./standalone/funnel.js to your application and reference the `Funnel` global.
 
 
 ## Unit Tests

@@ -13470,6 +13470,22 @@ Funnel.prototype.hit = function(url){\n\
 };\n\
 \n\
 /**\n\
+ * Remove the funnel.\n\
+ *\n\
+ * ```js\n\
+ * funnel.remove()\n\
+ * ```\n\
+ *\n\
+ * @api public\n\
+ */\n\
+\n\
+Funnel.prototype.remove = function(){\n\
+  this.stepViews.forEach(function(stepView){\n\
+    stepView.remove();\n\
+  });\n\
+};\n\
+\n\
+/**\n\
  * Get the ratio of two values.\n\
  *\n\
  * Special case - will return `1` if `valueA` is larger than `valueB`.\n\
@@ -13517,27 +13533,13 @@ Funnel.prototype._getTrend = function(valueA, valueB){\n\
   var ratio = this._getRatio(valueA, valueB);\n\
   return ratio === 1 ? 1 : ratio - 1;\n\
 };\n\
-\n\
-/**\n\
- * Remove the funnel.\n\
- *\n\
- * ```js\n\
- * funnel.remove()\n\
- * ```\n\
- *\n\
- * @api public\n\
- */\n\
-\n\
-Funnel.prototype.remove = function(){\n\
-  this.stepViews.forEach(function(stepView){\n\
-    stepView.remove();\n\
-  });\n\
-};\n\
 //# sourceURL=src/funnel.js"
 ));
 
 require.register("funnel/src/stepModel.js", Function("exports, module",
-"var Emitter = require(\"component~emitter@1.1.2\");\n\
+"'use strict';\n\
+\n\
+var Emitter = require(\"component~emitter@1.1.2\");\n\
 \n\
 /**\n\
  * Expose `StepModel`.\n\
@@ -13602,7 +13604,9 @@ StepModel.prototype.get = function(attr){\n\
 ));
 
 require.register("funnel/src/stepsCollection.js", Function("exports, module",
-"var Emitter = require(\"component~emitter@1.1.2\");\n\
+"'use strict';\n\
+\n\
+var Emitter = require(\"component~emitter@1.1.2\");\n\
 \n\
 /**\n\
  * Expose `StepsCollection`.\n\
@@ -13636,7 +13640,9 @@ StepsCollection.prototype.add = function(model){\n\
 ));
 
 require.register("funnel/src/stepView.js", Function("exports, module",
-"var query = require(\"component~query@0.0.3\");\n\
+"'use strict';\n\
+\n\
+var query = require(\"component~query@0.0.3\");\n\
 var domify = require(\"component~domify@1.2.2\");\n\
 var bind = require(\"component~bind@0.0.1\");\n\
 var stepTemplate = require(\"funnel/templates/step.html\");\n\
@@ -13746,7 +13752,9 @@ StepView.prototype._changeConversionHandler = function(conversion){\n\
 ));
 
 require.register("funnel/src/viewUtils.js", Function("exports, module",
-"/**\n\
+"'use strict';\n\
+\n\
+/**\n\
  * Format a number as a percentage with the required decimal places.\n\
  *\n\
  * @param {Number} val\n\
