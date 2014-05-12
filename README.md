@@ -7,7 +7,7 @@ A component that tracks progress through a series of steps.
 
 ## Live Demo
 
-[Check out the live demo on CodePen](http://codepen.io/tanem/pen/AaxDd), which uses the stand-alone file.
+[Check out the live demo on CodePen](http://codepen.io/tanem/pen/wnBho), which uses the stand-alone files.
 
 
 ## Installation
@@ -95,6 +95,12 @@ Remove the funnel.
 ```js
 funnel.remove()
 ```
+
+
+## Credits
+
+ * Heavily influenced by the [Ducksboard funnel](http://dev.ducksboard.com/apidoc/slot-kinds/#funnels)
+ * [Mixpanel funnels](https://mixpanel.com/funnels/)
 
 
 ## License
