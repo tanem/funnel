@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tweening Counter Demo</title>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet" type="text/css">
+  <link href="../build/build.css" media="all" rel="stylesheet" type="text/css">
+  <style type="text/css">
+  body {
+    background: rgb(240,240,240);
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+  }
+
+  .funnel-demo-wrapper {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    padding: 8px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+  }
+
+  .funnel {
+    padding: 0;
+  }
+  </style>
+</head>
+<body>
+  <div class="funnel-demo-wrapper"><div class="funnel-demo"></div></div>
+  <script src="../build/build.js"></script>
+  <script>
+  (function(){
+
+    var raf = require('raf');
+    var random = require('random');
+    var Funnel = require('funnel');
+
+    var funnel = new Funnel().name('Funnel demo');
+    document.querySelector('.funnel-demo').appendChild(funnel.el);
+    
+    // Set up the required funnel steps.
+    funnel.step({ label: 'foo', url: 'http://foo.com' });
+    funnel.step({ label: 'bar', url: 'http://bar.com' });
+    funnel.step({ label: 'baz', url: 'http://baz.com' });
+    funnel.step({ label: 'qux', url: 'http://qux.com' });
+
+    // Every one to two seconds, imitate a trip through the funnel.
+    function loop(start, delay) {
+      var now = Date.now();
+      start = start || Date.now();
+      delay = delay || random(1000, 2000, true);
+      if (now - start >= delay) {
+        start = null;
+        delay = null;
+        hitUrls();
+      }
+      raf(loop.bind(null, start, delay));
+    }
+
+    var urls = ['http://foo.com', 'http://bar.com', 'http://baz.com', 'http://qux.com'];
+
+    // Hit the funnel steps in order from step zero to a random step depth.
+    function hitUrls() {
+      var urlDepth = random(0, urls.length - 1, true);
+      for (var i = 0, j = urlDepth; i <= j; i++) funnel.hit(urls[i]);
+    }
+
+    hitUrls();
+    loop(); 
+
+  }());
+  </script>
+</body>
+</html>

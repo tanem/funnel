@@ -1,0 +1,45 @@
+{
+  "name": "funnel",
+  "repository": "tanem/funnel",
+  "description": "A component that tracks progress through a series of steps.",
+  "version": "0.1.0",
+  "keywords": [
+    "funnel"
+  ],
+  "dependencies": {
+    "component/domify": "^1.2.2",
+    "segmentio/extend": "^1.0.0",
+    "component/emitter": "^1.1.2",
+    "component/query": "~0.0.3",
+    "component/raf": "^1.1.3",
+    "danzajdband/random": "*",
+    "component/bind": "~0.0.1",
+    "component/classes": "^1.2.1",
+    "component/css": "~0.0.5"
+  },
+  "development": {
+    "dependencies": {
+      "danzajdband/random": "*",
+      "techjacker/expect.js": "master",
+      "visionmedia/mocha": "*",
+      "ianstormtaylor/sinon": "master"
+    }
+  },
+  "license": "MIT",
+  "main": "src/funnel.js",
+  "scripts": [
+    "src/funnel.js",
+    "src/stepModel.js",
+    "src/stepsCollection.js",
+    "src/stepView.js",
+    "src/viewUtils.js"
+  ],
+  "templates": [
+    "templates/funnel.html",
+    "templates/step.html"
+  ],
+  "styles": [
+    "src/funnel.css"
+  ],
+  "demo": ""
+}
