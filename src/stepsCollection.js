@@ -1,7 +1,5 @@
 'use strict';
 
-var Emitter = require('emitter');
-
 /**
  * Expose `StepsCollection`.
  */
@@ -16,7 +14,6 @@ module.exports = StepsCollection;
  */
 
 function StepsCollection() {
-  Emitter(this);
   this.models = [];
 }
 

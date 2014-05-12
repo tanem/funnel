@@ -13606,8 +13606,6 @@ StepModel.prototype.get = function(attr){\n\
 require.register("funnel/src/stepsCollection.js", Function("exports, module",
 "'use strict';\n\
 \n\
-var Emitter = require(\"component~emitter@1.1.2\");\n\
-\n\
 /**\n\
  * Expose `StepsCollection`.\n\
  */\n\
@@ -13622,7 +13620,6 @@ module.exports = StepsCollection;\n\
  */\n\
 \n\
 function StepsCollection() {\n\
-  Emitter(this);\n\
   this.models = [];\n\
 }\n\
 \n\
