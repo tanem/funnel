@@ -2,7 +2,7 @@
   "name": "funnel",
   "repository": "tanem/funnel",
   "description": "A component that tracks progress through a series of steps.",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "keywords": [
     "funnel"
   ],
