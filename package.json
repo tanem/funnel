@@ -1,6 +1,7 @@
 {
   "name": "funnel",
   "description": "A component that tracks progress through a series of steps.",
+  "homepage": "https://github.com/tanem/funnel",
   "repository" : {
     "type" : "git",
     "url" : "git://github.com/tanem/funnel.git"
