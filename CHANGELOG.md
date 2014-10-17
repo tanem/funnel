@@ -1,3 +1,9 @@
+## v1.0.1 / 2014-10-18
+
+ * ([76e3078](https://github.com/tanem/funnel/commit/76e3078627221aa1b67b7bbd0bd8b8fe6ad879af)) Add commit links to changelog
+ * ([f989c92](https://github.com/tanem/funnel/commit/f989c92fc1e1b878b4678969a0d54a713c23f320)) Add homepage property to package.json
+ * ([2a353e9](https://github.com/tanem/funnel/commit/2a353e9ae71904a52967523a25978f17544d1e9f)) Add changelog (fixes [#1](https://github.com/tanem/funnel/issues/1))
+
 ## v1.0.0 / 2014-09-19
 
  * ([8cc2c39](https://github.com/tanem/funnel/commit/8cc2c39052dab5fde7a0ba3f08c0dc2792e9a1fc)) v1.0.0
